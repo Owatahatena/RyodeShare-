@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="static/css/stylesheet.css">
+    <title>Ryo de Share!</title>
+  </head>
+  <body>
+    <header>
+        <h1 class="headline">
+            <a>Ryo de Share!</a>
+        </h1>
+  
+    </header>
+    
+    <div class="tabs">
+        <input id="time-check" type="radio" name="tab_item" checked>
+        <label class="tab_item" for="time-check">時間確認</label>
+        <input id="breakfast-input" type="radio" name="tab_item">
+        <label class="tab_item" for="breakfast-input">朝食入力</label>
+        <input id="dinner-input" type="radio" name="tab_item">
+        <label class="tab_item" for="dinner-input">夕食入力</label>
+        <input id="bathing-input" type="radio" name="tab_item">
+        <label class="tab_item" for="bathing-input">入浴入力</label>
+
+        <div class="tab_content" id="time-check-content">
+            <div class="tab_content_description">
+                <h1 class="titlebox">スケジュール確認</h1>
+                <div class="contents">
+                    <p class="c-txtsp">朝食<br></p>
+		    <p class="datebox">{{breakfast_time}}</p>
+                    <p class="c-txtsp">夕食<br></p>
+		    <p class="datebox">{{dinner_time}}</p>
+                    <p class="c-txtsp">入浴<br></p>
+		    <p class="datebox">{{bath_time}}</p>
+		    <form action="/_request_bathtime" method="post">
+	            <input type ="radio" name = "break" value = 1> b-group1
+		    <input type ="radio" name = "break" value = 2> b-group2
+		    <input type ="radio" name = "break" value = 3> b-group3
+		    <br>
+		    <input type ="radio" name = "dinner" value = 1> d-group1
+		    <input type ="radio" name = "dinner" value = 2> d-group2
+		    <input type ="radio" name = "dinner" value = 3> d-group3
+                    <br>
+                    <input type ="radio" name = "bath" value = 1> bath-group1
+                    <input type ="radio" name = "bath" value = 2> bath-group2
+                    <input type ="radio" name = "bath" value = 3> bath-group3
+
+		    <input type="submit", value='aaa'>
+		    </form>
+                </div>
+            </div>
+        </div>
+	<form action="/_request_bathtime" method="post">
+        <div class="tab_content" id="breakfast-input-content">i
+            <div class="tab_content_description">
+                <h1 class="titlebox">朝食時間入力</h1>
+                <div class="contents">
+                    <p class="c-txtsp">明日の希望時間を入力してください</p>
+                    <input type="time" name="example" step="300" class="timebox"><br>
+                    <p class="rod">～</p><br>
+                    <input type="time" name="example" step="300" class="timebox">    
+                </div>
+            </div>
+        </div>
+        <div class="tab_content" id="dinner-input-content">
+            <div class="tab_content_description">
+                <h1 class="titlebox">夕食時間入力</h1>
+                <div class="contents">
+                    <p class="c-txtsp">明日の希望時間を入力してください</p>
+                    <input type="time" name="example" step="300" class="timebox"><br>
+                    <p class="rod">～</p><br>
+                    <input type="time" name="example" step="300" class="timebox">    
+                </div>
+            </div>
+        </div>
+        <div class="tab_content" id="bathing-input-content">
+            <div class="tab_content_description">
+              <h1 class="titlebox">入浴時間入力</h1>
+              <div class="contents">
+                    <p class="c-txtsp">明日の希望時間を入力してください</p>
+                    <input type="time" name="request_time" step="300" class="timebox"><br>
+                    <button type="submit">送信</button>  
+	     	</form>
+	      </div>
+            </div>
+        </div>
+ 	 
+    </div>
+
+    <footer>
+        <p>熊本高等専門学校八代キャンパス情報システム研究部</p>
+    </footer>
+    
+  </body>
+
+</html>

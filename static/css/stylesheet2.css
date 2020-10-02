@@ -1,0 +1,148 @@
+* {
+    margin:0; 
+    padding:0;
+}
+
+header{
+    height: 150px;
+    width: 100%;
+    text-align: center;
+    line-height: 150px;
+    font-size: 40px;
+    background-color: #41c9cd;
+    color: white;
+}
+
+.tabs {
+    margin-top: 100px;
+    padding-bottom: 40px;
+    background-color: #fff;
+    width: 100%;
+    margin: 0 auto;
+}
+  
+/*タブのスタイル*/
+.tab_item {
+    width: calc(100%/3);
+    height: 70px;
+    background-color: #41c9cd;
+    border-top: 3px solid white;
+    border-bottom: 5px solid #41c9cd;
+    line-height: 70px;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    display: block;
+    float: left;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.tab_item:hover {
+    opacity: 0.75;
+}
+  
+/*ラジオボタンを全て消す*/
+input[name="tab_item"] {
+    display: none;
+}
+  
+input[type=radio]{
+    transform: scale(1.4);
+}
+
+/*タブ切り替えの中身のスタイル*/
+.tab_content {
+    min-height: 82.3vh;
+    display: none;
+    padding: 40px 40px 0;
+    clear: both;
+    overflow: hidden;
+}
+
+.tab_login {
+    min-height: 82.3vh;
+    padding: 40px 40px 0;
+    clear: both;
+    overflow: hidden;
+
+}
+
+.form-group {
+   color: #838383;
+   font-size: 40px;
+}
+
+.form-control {
+    width: 95%;
+    margin: auto;
+    padding: 10px;
+}
+
+button {
+    white-space: nowrap;
+    display: block;
+    color: white;
+    background-color: #41c9cd;
+    margin: 5px;
+    padding: 10px 30px;
+    font-size: 30px;
+}
+  
+/*選択されているタブのコンテンツのみを表示*/
+#time-check:checked ~ #time-check-content,
+#breakfast-input:checked ~ #breakfast-input-content,
+#self-assessment:checked ~ #self-assessment-content {
+    display: block;
+}
+  
+/*選択されているタブのスタイルを変える*/
+.tabs input:checked + .tab_item {
+    color: #838383;
+    border-bottom: 5px solid #838383;
+}
+
+.titlebox{
+    font-size: 70px;
+    border: 6px solid #838383;
+}
+
+.contents{
+    margin: 0;
+}
+
+.c-txtsp{
+    color: #838383;
+    font-size: 50px;
+}
+
+.datebox{
+    font-size: 45px;
+    border: 2px solid #838383;
+}
+
+label {
+    margin: 0;
+    width: 30%;
+    font-size: 40px;
+    color: #838383;
+}
+
+.ntext{
+    font-size: 70px;
+    color: #838383;
+}
+
+input{
+    white-space: nowrap;
+    margin: 0;
+}
+
+footer{
+    width: 100%;
+    background-color: #41c9cd;
+    color: white;
+}
+
+

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="static/css/stylesheet2.css">
+    <title>Ryo de Share!</title>
+  </head>
+  <body>
+    <header>
+        <h1 class="headline">
+            <a>Ryo de Share!</a>
+        </h1>
+  
+    </header>
+    
+    <div class="tabs">
+        <input id="time-check" type="radio" name="tab_item" checked>
+        <label class="tab_item" for="time-check">時間確認</label>
+        <input id="breakfast-input" type="radio" name="tab_item">
+        <label class="tab_item" for="breakfast-input">希望時間入力</label>
+        <input id="self-assessment" type="radio" name="tab_item">
+        <label class="tab_item" for="self-assessment">自己評価</label>
+
+        <div class="tab_content" id="time-check-content">
+            <div class="tab_content_description">
+                <h1 class="titlebox">スケジュール確認</h1>
+                <div class="contents">
+                    <p class="c-txtsp">朝食<br></p>
+		    <p class="datebox">{{breakfast_time}}</p>
+                    <p class="c-txtsp">夕食<br></p>
+		    <p class="datebox">{{dinner_time}}</p>
+                    <p class="c-txtsp">入浴<br></p>
+		    <p class="datebox">{{bath_time}}</p>    
+                </div>
+            </div>
+        </div>
+        <div class="tab_content" id="breakfast-input-content">
+            <div class="tab_content_description">
+                <h1 class="titlebox">希望時間入力</h1>
+                <div class="contents">
+                    <p class="c-txtsp">明日の希望時間を入力してください</p>
+                    <p class="ntext">朝食</p>
+		    <form action="/_request_bathtime" method="post">
+                    <input type="radio" name="breakfast" value=1 id="timebox"><label for="timebox">7時</label>
+                    <input type="radio" name="breakfast" value=2 id="timebox"><label for="timebox">7時半</label>
+                    <input type="radio" name="breakfast" value=3 id="timebox"><label for="timebox">8時</label>
+                    <input type="radio" name="breakfast" value=4 id="timebox"><label for="timebox">8時半</label>
+                    <p class="ntext">夕食</p>
+                    <input type="radio" name="dinner" value=1 id="timebox"><label for="timebox">17時半</label>
+                    <input type="radio" name="dinner" value=2 id="timebox"><label for="timebox">18時</label>
+                    <input type="radio" name="dinner" value=3 id="timebox"><label for="timebox">18時半</label>
+                    <input type="radio" name="dinner" value=4 id="timebox"><label for="timebox">19時</label>
+                    <p class="ntext">入浴</p>
+                    <input type="radio" name="bathing" value=1 id="timebox"><label for="timebox">18時</label>
+                    <input type="radio" name="bathing" value=2 id="timebox"><label for="timebox">18時半</label>
+                    <input type="radio" name="bathing" value=3 id="timebox"><label for="timebox">19時</label>
+                    <input type="radio" name="bathing" value=4 id="timebox"><label for="timebox">19時半</label>
+                    <input type="radio" name="bathing" value=5 id="timebox"><label for="timebox">20時</label>
+                    <input type="radio" name="bathing" value=6 id="timebox"><label for="timebox">20時半</label>
+                    <br><button>送信</button>
+		    </form>
+                </div>
+            </div>
+        </div>
+        <div class="tab_content" id="self-assessment-content">
+            <div class="tab_content_description">
+                <h1 class="titlebox">食事中の自己評価</h1>
+                <div class="contents">
+                    <p class="c-txtsp">自分の食事中の会話量を選択してください</p>
+		    <form action="/evalution" method="post">
+                    <input type="radio" name="dinner" value=1 id="assessment"><label for="assessment">1 話さなかった</label><br>
+                    <input type="radio" name="dinner" value=2 id="assessment"><label for="assessment">2</label><br>
+                    <input type="radio" name="dinner" value=3 id="assessment"><label for="assessment">3</label><br>
+                    <input type="radio" name="dinner" value=4 id="assessment"><label for="assessment">4</label><br>
+                    <input type="radio" name="dinner" value=5 id="assessment"><label for="assessment">5 非常に話した</label>
+                    <button>送信</button>
+		    </form>
+                </div>
+            </div>
+        </div>
+  
+    </div>
+
+    <footer>
+        <p>熊本高等専門学校八代キャンパス情報システム研究部</p>
+    </footer>
+    
+  </body>
+
+</html>
